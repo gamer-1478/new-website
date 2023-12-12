@@ -1,0 +1,48 @@
+@import url(https://db.onlinewebfonts.com/c/7200c6dd8ac604abe09f5159e53a40c0?family=Mark+Pro);
+@import url(https://db.onlinewebfonts.com/c/c7e919b8358daafbec26cde70a5237f9?family=MarkPro-Regular);
+@import url(https://db.onlinewebfonts.com/c/01d273202731e44f0f1187f3afcaf156?family=Mark+Pro+Bold);
+@import url('https://fonts.cdnfonts.com/css/d-din');
+
+.body {
+    font-family: "Mark Pro", sans-serif;
+}
+
+.landing-container {
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-right {
+    margin-left: 2vw;
+    width: 40vw;
+}
+
+.landing-left {
+    width: 15vw;
+    background-size: cover;
+    border-radius: 50% 50% 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-title {
+    font-family: "Mark Pro Bold", sans-serif;
+    width: 100%;
+    font-size: 3.3rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.landing-description {
+    width: 100%;
+    font-family: "D-DIN", sans-serif;
+    font-size: 1.2rem;
+    color: #a1a1a1;
+    margin-bottom: 1rem;
+}
