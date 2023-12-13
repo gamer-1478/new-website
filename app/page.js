@@ -5,6 +5,7 @@ import { faDiscord, faSquareGithub, faSquareTwitter } from '@fortawesome/free-br
 import { faMailForward } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import NavigationBarLand from '@/components/navcomp';
+import SpotifyComponent from './spotifyComponent';
 
 export const metadata = {
   title: 'Aayush Garg',
@@ -23,15 +24,12 @@ export default function Home() {
           </h2>
           <h2 className='landing-description'>I like to build useful products, yes, but more than that <i>FUNNNN</i> products.
             I am interested in the web, and furthering it. I primarily work with JavaScript, Python and Dart.</h2>
-          <h2 className='landing-description'>
-            I love YouTube, cycling, and among other things listening to music. Currently I am listening to (add the code here). I feel like music makes life, liveable.
-          </h2>
+          <SpotifyComponent />
           <div className='landing-social-links mt-10' style={{ display: 'flex', width: 'min-content'}}>
             <FontAwesomeIcon icon={faSquareTwitter} className='h-7' />
             <FontAwesomeIcon icon={faSquareGithub} className='h-7 ml-3' />
             <FontAwesomeIcon icon={faDiscord} className='h-7 ml-3' />
             <FontAwesomeIcon icon={faEnvelope} className='h-7 ml-3' />
-
           </div>
         </div>
       </main>
