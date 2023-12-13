@@ -16,6 +16,13 @@ const nextConfig = {
             },
         ],
     },
+    experimental: {
+        serverActions: true,
+        serverActions: {
+            // edit: updated to new key. Was previously `allowedForwardedHosts`
+            allowedOrigins: ['**', "localhost:**", "**.netlify.app"],
+        },
+    },
 }
 
 module.exports = nextConfig

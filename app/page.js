@@ -6,6 +6,8 @@ import { faMailForward } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import NavigationBarLand from '@/components/navcomp';
 import SpotifyComponent from './spotifyComponent';
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export const metadata = {
   title: 'Aayush Garg',

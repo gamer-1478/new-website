@@ -1,8 +1,8 @@
 /* eslint import/no-anonymous-default-export: [2, {"allowAnonymousFunction": true}] */
+"use client"
 import 'firebase/compat/firestore';
-import firebase from 'firebase/compat/app';
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
+import firebase from 'firebase/compat/app'; 
+import { v4 as uuidv4 } from 'uuid';
 
 
 export default async function () {
@@ -39,9 +39,11 @@ export default async function () {
                             next: { revalidate: 0 },
                             "method": "POST",
                             "headers": { "Content-Type": "application/x-www-form-urlencoded" },
+                            
                             "body": [`${encodeURIComponent('grant_type')}=${encodeURIComponent('refresh_token')}`, `${encodeURIComponent('refresh_token')}=${encodeURIComponent(Fdoc.refresh_token)}`, `${encodeURIComponent('client_secret')}=${encodeURIComponent('f782e45e37ea42d3892ed030a1bd363b')}`, `${encodeURIComponent('client_id')}=${encodeURIComponent('0f904065f5114298ac1ed6d10da05e00')}`].join('&')
-                        }).then(async (response) => {
-                            resolve(await response.json())
+                        }).then(async (results) => {
+                            console.log(results)
+                            resolve(results);
                         })
                     }
                     catch (err) {
@@ -54,23 +56,28 @@ export default async function () {
                     }
                 }).then((resolve) => { return resolve })
                     .catch((reject) => { return reject })
-                await PstResp.then(async () => {
+
+                await PstResp.then(async (results) => {
                     spotifyDoc.update({
                         created: Date.now() / 1000,
-                        data_: await PstResp
+                        data_: await results.json()
                     })
                 })
-                resolve(await GetDataSpot());
+                const results = await GetDataSpot()
+                console.log(results)
+                resolve(results);
             }
         }
 
         async function GetDataSpot() {
             let Fdoc = await spotifyDoc.get()
-            Fdoc = await Fdoc.data()
+            Fdoc = Fdoc.data()
 
             let response = new Promise(async (resolve, reject) => {
                 try {
                     await fetch(API_ENDPOINT, {
+                        "cache": "no-store",
+                        next: { revalidate: 0 },
                         "method": "GET",
                         "headers": { "Authorization": "Bearer " + Fdoc.data_.access_token }
                     }).then((result) => { resolve(result.json()); })
