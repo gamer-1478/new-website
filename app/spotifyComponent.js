@@ -1,5 +1,4 @@
 "use client"
-import spotify from './spotify';
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 import { useEffect, useState } from 'react';
@@ -11,7 +10,8 @@ export default function SpotifyComponent() {
 
     useEffect(() => {
         async function main() {
-            var Resultsi = await spotify();
+            var Resultsi = await (await fetch('http://localhost:3001/spotify', {method: 'GET'})).json();
+            console.log(Resultsi);
             Resultsi = JSON.parse(Resultsi.body)
             setResults(Resultsi);
             console.log(Resultsi);

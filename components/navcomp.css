@@ -10,8 +10,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
-    width: 50vw;
+    height: 70px;
+    width: 40vw;
     position: fixed;
     top: 2rem;
     z-index: 999;
@@ -43,7 +43,7 @@
     grid-gap: 50px;
     list-style: none;
     text-align: center;
-    width: 30vw;
+    width: max-content;
     justify-content: end;
     margin-right: 2rem;
 }

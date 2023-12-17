@@ -1,8 +1,17 @@
-import React from 'react'
+"use client"
+import React, { useEffect, useState } from 'react'
 import './blogs.css'
 import NavigationBarLand from '@/components/navcomp'
 
-export default function page() {
+export default function Page() {
+    const [blogs, setBlogs] = useState()
+    useEffect(() => {
+        async function main() {
+            const blogs = await (await fetch('https://newaayushbackend.onrender.com/blogs', { method: 'GET' })).json();
+            setBlogs(blogs)
+        }
+        main()
+    }, [])
     return (
         <div>
             <NavigationBarLand />
@@ -14,28 +23,20 @@ export default function page() {
                     </h2>
                 </div>
                 <div className='blogs-actual'>
-                    <div className='blog'>
-                        <div className='blog-left'>
-                            <p className='blog-type'>Game Review</p> <br></br>
-                            <p className='blog-type'>12th December 2023</p>
-                        </div>
-                        <div>
-                            <h1 className='blog-title'>My first blog</h1>
-                            <h2 className='blog-description'>This is my first blog, and I am writing it to test out the blog page. I will be writing more blogs soon. Stay tuned.</h2>
-                        </div>
-                    </div>
-
-                    <div className='blog'>
-                        <div className='blog-left'>
-                            <p className='blog-type'>Utkarsh love letter</p> <br></br>
-                            <p className='blog-type'>12th December 2023</p>
-                        </div>
-                        <div>
-                            <h1 className='blog-title'>My second blog</h1>
-                            <h2 className='blog-description'>This is my first blog, and I am writing it to test out the blog page. I will be writing more blogs soon. Stay tuned.</h2>
-                        </div>
-                    </div>
-
+                    {blogs && blogs.blogs.map((el, ind) => {
+                        return (
+                            <div className='blog' key={"blogs" + ind} onClick={()=>window.location.href = "/blogs/" + el.id}>
+                                <div className='blog-left'>
+                                    <p className='blog-type'>{el.type}</p> <br></br>
+                                    <p className='blog-type'>{el.date}</p>
+                                </div>
+                                <div>
+                                    <h1 className='blog-title'>{el.title}</h1>
+                                    <h2 className='blog-description'>{el.description}</h2>
+                                </div>
+                            </div>
+                        )
+                    })}
                 </div>
             </main>
         </div>

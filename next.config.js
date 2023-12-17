@@ -20,7 +20,7 @@ const nextConfig = {
         serverActions: true,
         serverActions: {
             // edit: updated to new key. Was previously `allowedForwardedHosts`
-            allowedOrigins: ['**', "localhost:**", "**.netlify.app"],
+            allowedOrigins: ['**', "localhost:**", "**.netlify.app", "**.onrender.com", "**.aayushgarg.net"],
         },
     },
 }
