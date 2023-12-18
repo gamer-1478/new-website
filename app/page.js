@@ -8,6 +8,7 @@ import NavigationBarLand from '@/components/navcomp';
 import SpotifyComponent from './spotifyComponent';
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Aayush Garg',
@@ -22,11 +23,12 @@ export default function Home() {
         <Image className='landing-left' alt='my-image' src="/main.jpg" width={0} height={0} sizes={400} />
         <div className='landing-right'>
           <h1 className='landing-title'>Messing around trying to be human, since 2017. Developer.</h1>
-          <h2 className='landing-description'>I am Aayush Garg a senior at Amity International School, Gurgaon, where I currently serve as the President of Tech Syndicate (Tech Society), and ATL Lab (Hardware Club).
+          <h2 className='landing-description'>I am <span style={{color:'white'}}>Aayush Garg</span> a senior at Amity International School, Gurgaon, where I currently serve as the President of Tech Syndicate (Tech Society), and ATL Lab (Hardware Club).
           </h2>
           <h2 className='landing-description'>I like to build useful products, yes, but more than that <i>FUNNNN</i> products.
             I am interested in the web, and furthering it. I primarily work with JavaScript, Python and Dart.</h2>
           <SpotifyComponent />
+          <h2 className='landing-description' style={{ color: 'white' }}>Reach out! <Link href="mailto:contact@aayushgarg.net"><span className='hello'>Say Hello</span></Link></h2>
           <div className='landing-social-links mt-10' style={{ display: 'flex', width: 'min-content'}}>
             <FontAwesomeIcon icon={faSquareTwitter} className='h-7' />
             <FontAwesomeIcon icon={faSquareGithub} className='h-7 ml-3' />
