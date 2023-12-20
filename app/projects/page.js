@@ -3,8 +3,6 @@ import React from 'react'
 import './projects.css'
 import "../blogs/blogs.css"
 import Image from 'next/image'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata = {
     title: 'Projects',

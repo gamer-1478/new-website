@@ -37,13 +37,12 @@ function NavigationBarLand() {
                                 Projects
                             </Link>
                         </li>
-                        <li className='nav-item'>
+                        {/* <li className='nav-item'>
                             <Link smooth="true"
                                 href='/games' className='nav-links-landing landing' onClick={closeMobileMenu}>
                                 Games
                             </Link>
-                        </li>
-
+                        </li> */}
                     </ul>
                 </div>
             </nav>
