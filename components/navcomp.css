@@ -49,11 +49,10 @@
 }
 
 .nav-item {
-    font-size: 0.9vw;
+    font-size: 0.9rem;
 }
 
 .nav-links {
-    color: #000;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -86,10 +85,16 @@
 
 .menu-icon {
     display: none;
-    line-height: 1.1;
 }
 
 @media screen and (max-width: 960px) {
+    .navbar-container {
+        width: 90vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
     .nav-menu {
         justify-content: flex-start;
         display: flex;
@@ -135,7 +140,7 @@
         border-top: rgba(0, 0, 0, 0.3) 1px solid;
         padding-top: 20px;
         margin: 20px;
-        color: #000;
+        color: #fff;
     }
 
 
@@ -146,23 +151,18 @@
     }
 
     .navbar-logo {
-        height: 100px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(30%, 0%);
+        font-size: 1.2rem;
     }
 
     .menu-icon {
+        width: 10vw;
         height: 80px;
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        line-height: 80px;
-        margin-right: 20px;
+        display: flex;
         font-size: 1.8rem;
         cursor: pointer;
+        color: #fff !important;
+        justify-content: flex-start;
+        align-items: center;
     }
 
     .nav-links-mobile {
@@ -188,11 +188,11 @@
         }
 
         .landing {
-            color: black !important;
+            color: white !important;
         }
 
         .mobile {
-            color: black !important;
+            color: white !important;
         }
     }
 }

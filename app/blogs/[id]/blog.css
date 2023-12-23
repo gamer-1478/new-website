@@ -1246,3 +1246,14 @@
     color: #717171;
     font-family: ui-sans-serif, sans-serif, system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+@media screen and (max-width: 960px) {
+    .blog-page {
+        margin-top: 20vh;
+    }
+
+    .header-info {
+        width: 100%;
+        padding: 10px;
+    }
+}

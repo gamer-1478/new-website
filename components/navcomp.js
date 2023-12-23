@@ -21,7 +21,7 @@ function NavigationBarLand() {
                     </Link>
 
                     <div className='menu-icon landing' onClick={handleClick}>
-                        {click ? <FontAwesomeIcon icon={faTimes} style={{ fontSize: 20, color: 'black' }} /> : <FontAwesomeIcon icon={faBars} style={{ fontSize: 20, color: 'black' }} />}
+                        {click ? <FontAwesomeIcon icon={faTimes} style={{ fontSize: 20, color: 'white' }} /> : <FontAwesomeIcon icon={faBars} style={{ fontSize: 20, color: 'white' }} />}
                     </div>
 
                     <ul className={click ? 'nav-menu active landing' : 'nav-menu landing'}>

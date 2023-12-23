@@ -7,7 +7,7 @@ import './blog.css'
 import NavigationBarLand from '@/components/navcomp';
 import BackComponent from './backComponent';
 import { redirect } from 'next/navigation'
-
+var metadata;
 export default async function Blog({ params }) {
 
     const blog = await (await fetch('https://newaayushbackend.onrender.com/blogs/' + params.id, { method: 'GET' })).json();
@@ -15,6 +15,10 @@ export default async function Blog({ params }) {
         return redirect('/blogs')
     }
     blog.blog = (await unified().use(remarkParse).use(remarkHtml).process(blog.blog)).value
+    metadata = {
+        title: blog.title,
+        description: blog.type,
+    }
 
     console.log(blog)
     return (
@@ -36,3 +40,5 @@ export default async function Blog({ params }) {
         </>
     )
 }
+
+export {metadata};

@@ -69,3 +69,45 @@
     padding-right: 1vw;
     width: 10vw;
 }
+
+
+@media screen and (max-width: 960px) {
+    .blogs-title {
+        font-size: 2.3rem;
+    }
+
+    .blog-description {
+        font-size: 1rem;
+    }
+
+    .blogs-inner-container {
+        width: 95vw;
+    }
+
+    .blogs-actual, .blog {
+        width: 90vw;
+    }
+
+    .blog {
+        flex-direction: column;
+        border-width: 1px;
+        margin-bottom: 4vw;
+    }
+
+    .blog-left {
+        padding: 0;
+        width: 85vw;
+        border-right-width: 0;
+        padding-bottom: 5vw;
+        border-bottom-width: 1px;
+    }
+
+    .blog-title {
+        padding-top: 2vw;
+        font-size: 1.5rem;
+    }
+
+    .blog-description {
+        width: 85vw;
+    }
+}

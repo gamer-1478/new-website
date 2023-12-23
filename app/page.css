@@ -14,7 +14,7 @@
 
 .landing-container {
     background-color: #000;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -56,4 +56,33 @@
     color: #fff;
     font-family: "Mark Pro Bold", sans-serif;
     font-size: 1.2rem;
+}
+
+
+@media screen and (max-width: 960px) {
+    .landing-container {
+        flex-direction: column;
+        margin-top: 23vh;
+        margin-bottom: 5vh;
+    }
+
+    .landing-right {
+        margin-left: 0;
+        margin-top: 2vh;
+        width: 80vw;
+    }
+
+    .landing-left {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .landing-title {
+        font-size: 2.5rem;
+    }
+
+    .landing-description {
+        font-size: 1rem;
+    }
+    
 }
