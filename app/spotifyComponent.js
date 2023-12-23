@@ -1,27 +1,16 @@
-"use client"
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
-import { useEffect, useState } from 'react';
 
-export default function SpotifyComponent() {
-    const [currentMusic, setCurrentMusic] = useState(false);
-    const [Results, setResults] = useState();
+export default async function SpotifyComponent() {
+    var currentMusic = false;
 
-    useEffect(() => {
-        async function main() {
-            var Resultsi = await (await fetch('https://newaayushbackend.onrender.com/spotify', {method: 'GET'})).json();
-            console.log(Resultsi);
-            Resultsi = JSON.parse(Resultsi.body)
-            setResults(Resultsi);
-            console.log(Resultsi);
-            if (Resultsi != undefined && Resultsi.hasOwnProperty('data') && Resultsi.data.hasOwnProperty('item') && Resultsi.data.item.hasOwnProperty('name')) {
-                setResults(Resultsi.data.item);
-                setCurrentMusic(true);
-            }
-        }
-        main();
-    }, [])
-    
+    var Results = await(await fetch('https://newaayushbackend.onrender.com/spotify', { method: 'GET' })).json();
+    Results = JSON.parse(Results.body)
+    if (Results != undefined && Results.hasOwnProperty('data') && Results.data.hasOwnProperty('item') && Results.data.item.hasOwnProperty('name')) {
+        Results = Results.data.item;
+        currentMusic = true;
+    }
+
     return (
         <h2 className='landing-description'>
             I love YouTube, cycling, and among other things listening to music. {currentMusic ?

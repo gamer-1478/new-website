@@ -2,7 +2,11 @@ import React from 'react'
 import './blogs.css'
 import NavigationBarLand from '@/components/navcomp'
 import Link from 'next/link'
-const blogs = await (await fetch('https://newaayushbackend.onrender.com/blogs', { method: 'GET' })).json();
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+const blogs = await (await fetch('https://newaayushbackend.onrender.com/blogs', {
+    method: 'GET', next: { cache: false }, cache: "no-cache"
+})).json();
 
 export const metadata = {
     title: 'Blogs',
