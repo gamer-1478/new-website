@@ -3,6 +3,7 @@ import React from 'react'
 import './projects.css'
 import "../blogs/blogs.css"
 import Image from 'next/image'
+import projects from "./projects.json"
 
 export const metadata = {
     title: 'Projects',
@@ -21,61 +22,24 @@ export default function Projects() {
                     </h2>
                 </div>
                 <div className='projects-actual'>
-                    <div class="project-blob">
-                        <Image className='project-image' src="https://socialify.git.ci/techsyndicate/codimg/image?description=1&language=1&owner=1&stargazers=1&theme=Dark" width={0} height={0} alt='project-image' sizes='1000px' />
-                        <div class="project-header">
-                            <h2 class="project-heading">Toycathon <span className='project-year'>2023</span></h2>
-                            <p class="project-desc">Convert your resume into a personal portfolio website in seconds.</p>
-                            <a href="/resources/dev/app" style={{ display: 'flex', paddingTop: "10px" }} target="_blank" class="project-redirect">Project Code &nbsp;&nbsp;
-                            </a>
-                            <a href="/resources/dev/app" style={{ display: 'flex', paddingTop: "10px" }} target="_blank" class="project-redirect">Live &nbsp;&nbsp;
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-blob">
-                        <Image className='project-image' src="https://socialify.git.ci/techsyndicate/codimg/image?description=1&language=1&owner=1&stargazers=1&theme=Dark" width={0} height={0} alt='project-image' sizes='1000px' />
-                        <div class="project-header">
-                            <h2 class="project-heading">Toycathon <span className='project-year'>2023</span></h2>
-                            <p class="project-desc">Convert your resume into a personal portfolio website in seconds.</p>
-                            <a href="/resources/dev/app" style={{ display: 'flex', paddingTop: "10px" }} target="_blank" class="project-redirect">Project Code &nbsp;&nbsp;
-                            </a>
-                            <a href="/resources/dev/app" style={{ display: 'flex', paddingTop: "10px" }} target="_blank" class="project-redirect">Live &nbsp;&nbsp;
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-blob">
-                        <Image className='project-image' src="https://socialify.git.ci/techsyndicate/codimg/image?description=1&language=1&owner=1&stargazers=1&theme=Dark" width={0} height={0} alt='project-image' sizes='1000px' />
-                        <div class="project-header">
-                            <h2 class="project-heading">Toycathon <span className='project-year'>2023</span></h2>
-                            <p class="project-desc">Convert your resume into a personal portfolio website in seconds.</p>
-                            <a href="/resources/dev/app" style={{ display: 'flex', paddingTop: "10px" }} target="_blank" class="project-redirect">Project Code &nbsp;&nbsp;
-                            </a>
-                            <a href="/resources/dev/app" style={{ display: 'flex', paddingTop: "10px" }} target="_blank" class="project-redirect">Live &nbsp;&nbsp;
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-blob">
-                        <Image className='project-image' src="https://socialify.git.ci/techsyndicate/codimg/image?description=1&language=1&owner=1&stargazers=1&theme=Dark" width={0} height={0} alt='project-image' sizes='1000px' />
-                        <div class="project-header">
-                            <h2 class="project-heading">Toycathon <span className='project-year'>2023</span></h2>
-                            <p class="project-desc">Convert your resume into a personal portfolio website in seconds.</p>
-                            <a href="/resources/dev/app" style={{ display: 'flex', paddingTop: "10px" }} target="_blank" class="project-redirect">Project Code &nbsp;&nbsp;
-                            </a>
-                            <a href="/resources/dev/app" style={{ display: 'flex', paddingTop: "10px" }} target="_blank" class="project-redirect">Live &nbsp;&nbsp;
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-blob">
-                        <Image className='project-image' src="https://socialify.git.ci/techsyndicate/codimg/image?description=1&language=1&owner=1&stargazers=1&theme=Dark" width={0} height={0} alt='project-image' sizes='1000px' />
-                        <div class="project-header">
-                            <h2 class="project-heading">Toycathon <span className='project-year'>2023</span></h2>
-                            <p class="project-desc">Convert your resume into a personal portfolio website in seconds.</p>
-                            <a href="/resources/dev/app" style={{ display: 'flex', paddingTop: "10px" }} target="_blank" class="project-redirect">Project Code &nbsp;&nbsp;
-                            </a>
-                            <a href="/resources/dev/app" style={{ display: 'flex', paddingTop: "10px" }} target="_blank" class="project-redirect">Live &nbsp;&nbsp;
-                            </a>
-                        </div>
-                    </div>
+                    {
+                        projects.projects.map((project, i) => {
+                            return (
+                                <div class="project-blob" key={"projects" + i}>
+                                    <Image className='project-image' src={project["project-image"]} width={0} height={0} alt='project-image' sizes='1000px' />
+                                    <div class="project-header">
+                                        <h2 class="project-heading">{project["project-name"]} <span className='project-year'>{project["project-year"]}</span></h2>
+                                        <p class="project-desc">{project["project-description"]}</p>
+                                        <a href={project["project-code"]} style={{ display: 'flex', paddingTop: "10px" }} target="_blank" class="project-redirect">Project Code &nbsp;&nbsp;
+                                        </a>
+                                        <a href={project["project-demo"]} style={{ display: 'flex', paddingTop: "10px" }} target="_blank" class="project-redirect">Live &nbsp;&nbsp;
+                                        </a>
+                                    </div>
+                                </div>
+                            )
+                        })
+
+                    }
                 </div>
             </main>
         </div>

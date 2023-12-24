@@ -10,7 +10,7 @@ import { redirect } from 'next/navigation'
 var metadata;
 export default async function Blog({ params }) {
 
-    const blog = await (await fetch('https://newaayushbackend.onrender.com/blogs/' + params.id, { method: 'GET' })).json();
+    const blog = await (await fetch('https://test-app.projects.aayushgarg.net/blogs/' + params.id, { method: 'GET' })).json();
     if (blog.status == 404) {
         return redirect('/blogs')
     }

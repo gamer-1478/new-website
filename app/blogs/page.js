@@ -4,7 +4,7 @@ import NavigationBarLand from '@/components/navcomp'
 import Link from 'next/link'
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
-const blogs = await (await fetch('https://newaayushbackend.onrender.com/blogs', {
+const blogs = await (await fetch('https://test-app.projects.aayushgarg.net/blogs', {
     method: 'GET', next: { cache: false }, cache: "no-cache"
 })).json();
 

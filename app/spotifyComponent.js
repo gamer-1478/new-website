@@ -4,7 +4,7 @@ export const revalidate = 0;
 export default async function SpotifyComponent() {
     var currentMusic = false;
 
-    var Results = await(await fetch('https://newaayushbackend.onrender.com/spotify', { method: 'GET' })).json();
+    var Results = await (await fetch('https://test-app.projects.aayushgarg.net/spotify', { method: 'GET' })).json();
     Results = JSON.parse(Results.body)
     if (Results != undefined && Results.hasOwnProperty('data') && Results.data.hasOwnProperty('item') && Results.data.item.hasOwnProperty('name')) {
         Results = Results.data.item;
