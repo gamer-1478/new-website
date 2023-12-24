@@ -30,15 +30,18 @@ export default function Projects() {
                                     <div class="project-header">
                                         <h2 class="project-heading">{project["project-name"]} <span className='project-year'>{project["project-year"]}</span></h2>
                                         <p class="project-desc">{project["project-description"]}</p>
-                                        <a href={project["project-code"]} style={{ display: 'flex', paddingTop: "10px" }} target="_blank" class="project-redirect">Project Code &nbsp;&nbsp;
-                                        </a>
-                                        <a href={project["project-demo"]} style={{ display: 'flex', paddingTop: "10px" }} target="_blank" class="project-redirect">Live &nbsp;&nbsp;
-                                        </a>
+                                        {
+                                            project["project-code"] != "" ? <a href={project["project-code"]} style={{ display: 'flex', paddingTop: "10px" }} target="_blank" class="project-redirect">Project Code &nbsp;&nbsp;
+                                            </a> : <></>
+                                        }
+                                        {
+                                            project["project-demo"] != "" ? <a href={project["project-demo"]} style={{ display: 'flex', paddingTop: "10px" }} target="_blank" class="project-redirect">Live &nbsp;&nbsp;
+                                            </a> : <></>
+                                        }
                                     </div>
                                 </div>
                             )
                         })
-
                     }
                 </div>
             </main>

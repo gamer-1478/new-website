@@ -21,6 +21,7 @@
     background: #171717;
     transition: all .2s ease;
     height: max-content;
+    min-height: 450px;
     width: 20vw;
     cursor: pointer;
     margin-bottom: 2vw;

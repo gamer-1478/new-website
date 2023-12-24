@@ -1,13 +1,53 @@
 {
     "projects": [
         {
-            "project-image": "https://socialify.git.ci/gamer-1478/toycathon/image?description=1&language=1&owner=1&stargazers=1&theme=Dark",
-            "project-name": "Toycathon",
-            "project-year": "2021",
-            "project-description": "Toycathon is an initiative of the MOE, GOI, to crowd-source innovative toys. We built a app around Indian architecture, gamifying it.",
-            "project-code": "https://github.com/gamer-1478/toycathon",
-            "project-demo": "https://github.com/gamer-1478/toycathon"
-        }, 
+            "project-image": "/snapshot.png",
+            "project-name": "AI Project",
+            "project-year": "2023",
+            "project-description": "Summarises news and delivers it to you in a newsletter every week.",
+            "project-code": "https://github.com/gamer-1478/ai-project",
+            "project-demo": "https://snapshotnews.aayushgarg.net/"
+        },
+        {
+            "project-image": "/swasti.png",
+            "project-name": "Swasti App",
+            "project-year": "2023",
+            "project-description": "Mental health and counselling support app for amity sector 46.",
+            "project-code": "https://github.com/displicare/swastiapp",
+            "project-demo": "https://swastiaisg46.netlify.app/"
+        },
+        {
+            "project-image": "/robotronics.png",
+            "project-name": "Robotronics Reg",
+            "project-year": "2023",
+            "project-description": "After reg, school would get a email with a code used to verify in the discord server.",
+            "project-code": "https://github.com/techsyndicate/robo-23-reg-platform",
+            "project-demo": ""
+        },
+        {
+            "project-image": "/core.png",
+            "project-name": "Core Finals",
+            "project-year": "2023",
+            "project-description": "Redesign of BlackBerry's website for a competition.",
+            "project-code": "https://github.com/AlightKnight343/core-finals-23",
+            "project-demo": "https://core-finals-23.projects.aayushgarg.net/"
+        },
+        {
+            "project-image": "/veinindia.jpeg",
+            "project-name": "Vein India Scholars",
+            "project-year": "2023",
+            "project-description": "Paid work to develop a student outreach platform. Company is no more in buisness. Code is private under a NDA.",
+            "project-code": "",
+            "project-demo": "https://veinindia.in"
+        },
+        {
+            "project-image": "https://socialify.git.ci/displicare/alumni-meet-software/image?description=1&language=1&owner=1&stargazers=1&theme=Dark",
+            "project-name": "Alumni Meet Registeration",
+            "project-year": "22' 23'",
+            "project-description": "Used to give Winter Carnival and Alumni meet tickets to Alumnus.",
+            "project-code": "https://github.com/displicare/alumni-meet-software",
+            "project-demo": ""
+        },
         {
             "project-image": "https://socialify.git.ci/gamer-1478/epoch-production/image?description=1&language=1&owner=1&stargazers=1&theme=Dark",
             "project-name": "Spammm",
@@ -15,6 +55,14 @@
             "project-description": "Epoch was organised by Hackclub in 2022. It was a 36 hour hackathon. We made a spam as a service.",
             "project-code": "https://github.com/gamer-1478/epoch-production",
             "project-demo": "https://github.com/gamer-1478/epoch-production/blob/main/Pitch_Deck.pdf"
+        },
+        {
+            "project-image": "https://socialify.git.ci/gamer-1478/toycathon/image?description=1&language=1&owner=1&stargazers=1&theme=Dark",
+            "project-name": "Toycathon",
+            "project-year": "2021",
+            "project-description": "Toycathon is an initiative of the MOE, GOI, to crowd-source innovative toys. We built a app around Indian architecture, gamifying it.",
+            "project-code": "https://github.com/gamer-1478/toycathon",
+            "project-demo": ""
         }
     ]
 }
