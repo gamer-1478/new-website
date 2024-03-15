@@ -30,10 +30,10 @@ export default function Home() {
           <SpotifyComponent />
           <h2 className='landing-description' style={{ color: 'white' }}>Reach out! <Link href="mailto:contact@aayushgarg.net"><span className='hello'>Say Hello</span></Link></h2>
           <div className='landing-social-links mt-10' style={{ display: 'flex', width: 'min-content'}}>
-            <FontAwesomeIcon icon={faSquareTwitter} className='h-7' />
-            <FontAwesomeIcon icon={faSquareGithub} className='h-7 ml-3' />
-            <FontAwesomeIcon icon={faDiscord} className='h-7 ml-3' />
-            <FontAwesomeIcon icon={faEnvelope} className='h-7 ml-3' />
+            <Link target="_blank" href="https://twitter.com/gamer_1478"><FontAwesomeIcon icon={faSquareTwitter} className='h-7' /></Link>
+            <Link target="_blank" href="https://github.com/gamer-1478"><FontAwesomeIcon icon={faSquareGithub} className='h-7 ml-3' /></Link>
+            <Link target="_blank" href="https://discord.com/users/823237564130525184"><FontAwesomeIcon icon={faDiscord} className='h-7 ml-3' /></Link>
+            <Link target="_blank" href="mailto:contact@aayushgarg.net"><FontAwesomeIcon icon={faEnvelope} className='h-7 ml-3' /></Link>
           </div>
         </div>
       </main>

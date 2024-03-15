@@ -24,7 +24,7 @@
 
 .landing-right {
     margin-left: 2vw;
-    width: 40vw;
+    width: 60rem;
 }
 
 .landing-left {
@@ -39,17 +39,17 @@
 .landing-title {
     font-family: "Mark Pro Bold", sans-serif;
     width: 100%;
-    font-size: 3.3rem;
+    font-size: 3vw;
     color: #fff;
-    margin-bottom: 1rem;
+    margin-bottom: 1vw;
 }
 
 .landing-description {
     width: 100%;
     font-family: "D-DIN", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.2vw;
     color: #a1a1a1;
-    margin-bottom: 1rem;
+    margin-bottom: 1vw;
 }
 
 .SpecialTextA {
@@ -58,6 +58,9 @@
     font-size: 1.2rem;
 }
 
+.h-7 {
+    height: 4vh !important;
+}
 
 @media screen and (max-width: 960px) {
     .landing-container {
