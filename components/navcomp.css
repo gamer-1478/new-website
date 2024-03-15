@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 4vw;
     width: 40vw;
     position: fixed;
     top: 2rem;
@@ -28,7 +28,7 @@
     justify-self: start;
     cursor: pointer;
     text-decoration: none;
-    font-size: 0.9vw;
+    font-size: 1.1vw;
     margin-left: 30px;
 }
 
@@ -49,15 +49,7 @@
 }
 
 .nav-item {
-    font-size: 0.9rem;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    height: 80%;
-    align-self: center;
+    font-size: 1vw;
 }
 
 .nav-links-landing {
@@ -71,7 +63,7 @@
 
 .nav-links-landing:hover {
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.3vw;
     transition: all 0.1s ease-in-out;
 }
 
@@ -89,6 +81,9 @@
 
 @media screen and (max-width: 960px) {
     .navbar-container {
+        z-index: 1;
+        border-radius: 1.3rem;
+        height: 70px;
         width: 90vw;
         display: flex;
         justify-content: space-between;
@@ -99,18 +94,19 @@
         justify-content: flex-start;
         display: flex;
         flex-direction: column;
-        width: 100%;
-        height: calc(100vh - 100px);
+        width: 100vw;
+        margin: 0;
+        height: calc(100vh - 70px);
         position: absolute;
         grid-gap: 0;
-        top: 100px;
-        left: -100%;
+        top: 70px;
+        left: -120vw !important;
         opacity: 1;
         transition: all 0.5s ease;
     }
 
     .nav-item {
-        margin-top: 1rem;
+        margin-top: 1vw;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -118,18 +114,9 @@
 
     .nav-menu.active {
         background: #FFF6EC;
-        left: 0;
+        left: -5vw !important;
         opacity: 1;
         transition: all 0.5s ease;
-    }
-
-    .nav-links {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        border-top: rgba(0, 0, 0, 0.3) 1px solid;
-        padding-top: 20px;
-        margin: 20px;
     }
 
     .nav-links-landing {
@@ -138,13 +125,12 @@
         align-items: center !important;
         font-size: 1.5rem;
         border-top: rgba(0, 0, 0, 0.3) 1px solid;
-        padding-top: 20px;
         margin: 20px;
         color: #fff;
     }
 
 
-    .nav-links, .nav-links-landing {
+    .nav-links-landing {
         text-align: center;
         width: 80%;
         display: table;
@@ -181,10 +167,10 @@
 
     .navbar-landing {
         /* background: url('/land-mobile-nav.png') center center/cover no-repeat; */
-        background-color: #fff;
+        background-color: #000;
 
         .nav-menu.active {
-            background: #fff;
+            background: #000;
         }
 
         .landing {
@@ -192,7 +178,7 @@
         }
 
         .mobile {
-            color: white !important;
+            color: black !important;
         }
     }
 }

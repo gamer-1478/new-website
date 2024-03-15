@@ -28,6 +28,8 @@
 }
 
 .project-image {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -53,4 +55,33 @@
 .project-desc {
     color: #a1a1a1;
     font-size: 0.8vw;
+}
+
+@media screen and (max-width: 960px) {
+    .projects-actual {
+        grid-template-columns: repeat(1, 90vw);
+    }
+
+    .project-blob {
+        width: 90vw;
+        margin-bottom: 30px;
+        border-radius: 10px;
+    }
+
+    .project-header {
+        padding: 5vw;
+    }
+
+    .project-image {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .project-heading {
+        font-size: 6vw;
+    }
+
+    .project-desc, .project-year {
+        font-size: 4vw;
+    }
 }
